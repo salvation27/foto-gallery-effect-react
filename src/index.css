@@ -1,13 +1,106 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.gallery_item_foto {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+}
+.gall_wrap {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
+  column-count: 3;
+  column-width: 33.3%;
+  padding: 0 12px;
+}
+.gallery_item_foto img {
+  height: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gallery_item {
+  transition: all 350ms ease;
+  margin-bottom: 12px;
+}
+/* .model {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale();
+  background: #000;
+  overflow: hidden;
+  z-index: 999;
+  transition: opacity .3s ease ,visibility .4s ease , tranform .5 ease-in-out;
+}
+.model .open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.model img {
+width: auto;
+max-width: 100%;
+height: auto;
+max-height: 100%;
+display: block;
+line-height: 0; 
+box-sizing: border-box;
+padding: 20px 0 20px;
+margin: 0 auto;
+} */
+
+.App {
+  position: relative;
+}
+.model {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  overflow: hidden;
+  transform: scale(0);
+  transition: opacity .4s ease,visibility .4s ease ,transform .4s ease-in-out ;
+  transition: 2s;
+}
+.open {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  /* transition: 1s; */
+}
+.close_btn {
+  color: #fff;
+}
+.close_btn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
